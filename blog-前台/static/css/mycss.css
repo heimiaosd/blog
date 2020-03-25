@@ -1,5 +1,5 @@
 body{
-    background: url("../images/萝莉.jpg");
+    background: url("../images/006 (1).jpg");
 }
 
 .m-padded-tb-mini{
@@ -68,4 +68,15 @@ body{
     .m-mobile-show{
         display: block !important;
     }
+}
+
+/*----------shadow------------*/
+.m-shadow-small{
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.m-margin-th-small{
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
 }

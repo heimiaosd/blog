@@ -73,13 +73,146 @@
                <div class="ui basic teal left pointing label">方法论</div>
            </div>
            <div class="ui center aligned basic segment">
-               <button class="ui small orange basic circular button">赞赏</button>
+               <button id="paybtn" class="ui small orange basic circular button">赞赏</button>
+           </div>
+           <div class="ui payQ flowing popup top left transition hidden">
+               <div class="ui orange basic label">
+                   <div class="ui small images" style="font-size: inherit">
+                       <div class="ui image">
+                           <img src="./static/images/001.jpg" alt="" class="ui rounded bordered image">
+                           <div>美女</div>
+                       </div>
+                       <div class="ui image">
+                           <img src="./static/images/002.jpg" alt="" class="ui rounded image">
+                           <div>美女</div>
+                       </div>
+                       <div class="ui image">
+                           <img src="./static/images/003.jpg" alt="" class="ui rounded image">
+                           <div>美女</div>
+                       </div>
+                       <div class="ui image">
+                           <img src="./static/images/004.jpg" alt="" class="ui rounded image">
+                           <div>美女</div>
+                       </div>
+                       <div class="ui image">
+                           <img src="./static/images/005.jpg" alt="" class="ui rounded image">
+                           <div>美女</div>
+                       </div>
+                   </div>
+               </div>
            </div>
            <div class="ui attached positive message">
-               博客信息
+               <div class="ui grid">
+                   <div class="eleven wide column">
+                       <ui class="list">
+                           <li>作者</li>
+                           <li>版权声明</li>
+                           <li>时间</li>
+                       </ui>
+                   </div>
+                   <div class="five wide column">
+                       <img src="./static/images/006.jpg" alt="" class="ui small right floated rounded bordered image">
+                   </div>
+               </div>
            </div>
            <div class="ui bottom attached segment">
-               留言区域
+               <div class="ui comments">
+                   <h3 class="ui dividing header">留言区域</h3>
+                   <div class="comment">
+                       <a class="avatar">
+                           <img src="./static/images/001.jpg">
+                       </a>
+                       <div class="content">
+                           <a class="author">Matt</a>
+                           <div class="metadata">
+                               <span class="date">Today at 5:42PM</span>
+                           </div>
+                           <div class="text">
+                               How artistic!
+                           </div>
+                           <div class="actions">
+                               <a class="reply">Reply</a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="comment">
+                       <a class="avatar">
+                           <img src="./static/images/002.jpg">
+                       </a>
+                       <div class="content">
+                           <a class="author">Elliot Fu</a>
+                           <div class="metadata">
+                               <span class="date">Yesterday at 12:30AM</span>
+                           </div>
+                           <div class="text">
+                               <p>This has been very useful for my research. Thanks as well!</p>
+                           </div>
+                           <div class="actions">
+                               <a class="reply">Reply</a>
+                           </div>
+                       </div>
+                       <div class="comments">
+                           <div class="comment">
+                               <a class="avatar">
+                                   <img src="./static/images/003.jpg">
+                               </a>
+                               <div class="content">
+                                   <a class="author">Jenny Hess</a>
+                                   <div class="metadata">
+                                       <span class="date">Just now</span>
+                                   </div>
+                                   <div class="text">
+                                       Elliot you are always so right :)
+                                   </div>
+                                   <div class="actions">
+                                       <a class="reply">Reply</a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="comment">
+                       <a class="avatar">
+                           <img src="./static/images/004.jpg">
+                       </a>
+                       <div class="content">
+                           <a class="author">Joe Henderson</a>
+                           <div class="metadata">
+                               <span class="date">5 days ago</span>
+                           </div>
+                           <div class="text">
+                               Dude, this is awesome. Thanks so much
+                           </div>
+                           <div class="actions">
+                               <a class="reply">Reply</a>
+                           </div>
+                       </div>
+                   </div>
+                   <form class="ui reply form">
+                       <div class="field">
+                           <textarea name="content" placeholder="请输入留言信息。。。"></textarea>
+                       </div>
+                       <div class="fields">
+                           <div class="field">
+                               <div class="ui left icon input">
+                                   <i class="user icon"></i>
+                                    <input type="text" name="nickname" placeholder="姓名">
+                               </div>
+                           </div>
+                           <div class="field">
+                               <div class="ui left icon input">
+                                   <i class="mail icon"></i>
+                                   <input type="text" name="nickname" placeholder="邮箱">
+                               </div>
+                           </div>
+                           <div class="field">
+                               <div class="ui teal labeled submit icon button">
+                                   <i class="icon edit"></i> 发表
+                               </div>
+                           </div>
+                       </div>
+                   </form>
+               </div>
            </div>
        </div>
     </div>
@@ -127,6 +260,12 @@
     <script>
         $('.my.item').click(function () {
             $('m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('#paybtn').popup({
+           popup : $('.payQ.popup'),
+           on : 'click',
+           position: 'bottom center'
         });
     </script>
 </body>
