@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客</title>
 
-    <link rel="stylesheet" href="../semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../semantic.min.css">
     <link rel="stylesheet" href="../static/css/mycss.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
      -->
     <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui inverted secondary menu">
-            <div class="ui stackable content">
+            <div class="ui stackable container">
                 <h2 class="ui teal header item">Blog</h2>
                 <a href="#" class="m-item item m-mobile-hide"><i class="home  icon"></i>博客</a>
                 <a href="#" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
@@ -41,7 +41,7 @@
     </nav>
 
     <div class="ui attached pointing menu">
-        <div class="comment">
+        <div class="container">
             <div class="right menu">
                 <a href="" class="item">发布</a>
                 <a href="" class="active item">列表</a>
@@ -158,12 +158,16 @@
     </footer>
 
 
-    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
     <script src="../semantic.min.js"></script>
 
     <script>
         $('.my.item').click(function () {
             $('m-item').toggleClass('m-mobile-hide');
+            $('m-item').toggleClass('m-mobile-show');
         });
 
         $('.my.button').popup({
