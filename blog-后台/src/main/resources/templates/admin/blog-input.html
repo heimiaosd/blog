@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>发布</title>
 
-    <link rel="stylesheet" href="../../lib/editormd/css/editormd.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
     <link rel="stylesheet" type="text/css" href="../../semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/semantic.min.css">
 </head>
 <body>
     <!-- 导航 -->
@@ -24,7 +24,7 @@
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
                         <div class="text">
-                            <img src="../../images/002.jpg" style="width: 50px; height: 60px" alt="" class="ui small avatar image">
+                            <img src="../../static/images/002.jpg" style="width: 50px; height: 60px" alt="" class="ui small avatar image">
                             我
                         </div>
                         <i class="dropdown icon"></i>
@@ -149,7 +149,8 @@ s#### Disabled options
                     <button type="button" class="ui secondary button" >返回</button>
                     <button type="button" class="ui teal submit button">发布</button>
                 </div>
-                <div class="ui error message"></div>
+                <div class="ui error message" th:unless="#strings.isEmpty(message)}" th:text="${message}"></div>
+
             </form>
         </div>
     </div>
@@ -193,8 +194,8 @@ s#### Disabled options
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
-    <script src="../../js/semantic.min.js"></script>
-    <script src="../../lib/editormd/editormd.min.js"></script>
+    <script src="../../static/js/semantic.min.js"></script>
+    <script src="../../static/lib/editormd/editormd.min.js"></script>
 
     <script>
         $('.my.item').click(function () {
