@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head th:replace="_fragments::head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
@@ -10,15 +10,12 @@
 </head>
 <body>
     <!-- 导航 -->
-    <!--
-        inverted  反转
-     -->
     <nav class="ui inverted attached segment m-padded-tb-mini">
-        <div class="ui inverted secondary stackable menu">
-            <div class="ui container">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
                 <h2 class="ui teal header item">Blog</h2>
                 <a href="#" class="m-item item m-mobile-hide"><i class="home  icon"></i>首页</a>
-                <a href="#" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="tag icon"></i>标签</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="event icon"></i>标签</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>

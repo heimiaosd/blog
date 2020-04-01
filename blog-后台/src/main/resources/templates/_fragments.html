@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">博客详情</title>
+    <link rel="stylesheet" type="text/css" href="../css/semantic.min.css" th:href="@{/static/css/semantic.min.css}">
+    <link rel="stylesheet" type="text/css" href="../lib/animate.css-master/animate.css" th:href="@{/lib/animate.css-master/animate.css}">
+    <link rel="stylesheet" href="../lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../lib/typocss/typo.css" th:href="@{/lib/typocss/typo.css}">
+    <link rel="stylesheet" href="../lib/tocbot-4.10.1/dist/tocbot.css" th:href="@{/lib/tocbot-4.10.1/dist/tocbot.css}">
+    <link rel="stylesheet" href="../css/mycss.css" th:href="@{/css/mycss.css}">
+</head>
+<body>
+<!-- 导航 -->
+<nav th:fragemnt="menu(n)" class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <div class="ui  inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active' "><i class="home  icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active' "><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active' "><i class="tag icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active' "><i class="event icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active' "><i class="info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input ">
+                    <input type="text" placeholder="search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="" class="ui my item icon black button m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+</body>
+</html>

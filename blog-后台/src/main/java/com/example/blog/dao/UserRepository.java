@@ -1,4 +1,4 @@
-package com.example.blog.dbo;
+package com.example.blog.dao;
 
 import com.example.blog.po.User;
 import org.springframework.data.jpa.repository.JpaRepository;

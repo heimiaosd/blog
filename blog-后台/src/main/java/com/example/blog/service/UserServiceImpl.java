@@ -1,6 +1,6 @@
 package com.example.blog.service;
 
-import com.example.blog.dbo.UserRepository;
+import com.example.blog.dao.UserRepository;
 import com.example.blog.po.User;
 import com.example.blog.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;

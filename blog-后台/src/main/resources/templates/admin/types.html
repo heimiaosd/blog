@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客</title>
+    <title>分类管理</title>
 
     <link rel="stylesheet" type="text/css" href="../css/semantic.min.css" th:href="/static/css/semantic.min.css">
     <link rel="stylesheet" href="../css/mycss.css">
@@ -15,7 +15,7 @@
             <div class="ui stackable container">
                 <h2 class="ui teal header item">Blog</h2>
                 <a href="#" class="m-item item m-mobile-hide"><i class="home  icon"></i>博客</a>
-                <a th:href="@{/admin/type}" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
@@ -48,58 +48,22 @@
 
     <!-- 中间内容 -->
     <div class="ui stackable content m-padded-tb-large m-container">
-        <div class="ui content">
-            <form action="#" method="post" class="ui segment form">
-                <div class="inline fields">
-                    <div class="field">
-                        <input type="text" name="title" placeholder="标题">
-                    </div>
-                    <div class="field">
-                        <div class="ui left labled input">
-                            <div class="ui selection dropdown label">
-                                <input type="hidden" value="原创">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">原创</div>
-                                <div class="menu">
-                                    <div class="item" data-text="原创">原创</div>
-                                    <div class="item" data-text="翻译">翻译</div>
-                                    <div class="item" data-text="转载">转载</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui checkbox">
-                            <input type="checkbox" id="recommend" name="recommend">
-                            <label for="recommend">推荐</label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <button class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
-                    </div>
-                </div>
-            </form>
+        <div class="ui container">
             <table class="ui celled table">
                 <thead>
                     <tr>
                         <th></th>
-                        <th>标题</th>
-                        <th>类型</th>
-                        <th>推荐</th>
-                        <th>更新时间</th>
+                        <th>名称</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>刻意升级</td>
-                        <td>可以升级</td>
-                        <td>可以失败</td>
-                        <td>2020-3-20</td>
+                    <tr th:each="type,iterStat : ${page.content}}">
+                        <td th:text="${iterStat.count}">1</td>
+                        <td th:text="@{type.name}">刻意升级</td>
                         <td>
-                            <a href="#" class="ui small basic teal button">编辑</a>
-                            <a href="#" class="ui small basic red button">删除</a>
+                            <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui small basic teal button">编辑</a>
+                            <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui small basic red button">删除</a>
                         </td>
                     </tr>
                 </tbody>
@@ -107,10 +71,10 @@
                     <tr>
                         <th colspan="6">
                             <div class="ui floated pagination menu">
-                                <a href="#" class="item">上一页</a>
-                                <a href="#" class="item">下一页</a>
+                                <a th:href="@{/admin/types/(page=${page.number}-1)}" href="#" class="item">上一页</a>
+                                <a th:href="@{/admin/types/(page=${page.number}+1)}" href="#" class="item">下一页</a>
                             </div>
-                            <a href="" class="ui mini right floated teal basic button">新增</a>
+                            <a href="" class="ui mini right floated teal basic button" th:href="@{/admin/types/input">新增</a>
                         </th>
                     </tr>
                 </tfoot>
