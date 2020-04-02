@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,18 +49,17 @@
     <!-- 中间内容 -->
     <div class="ui stackable content m-padded-tb-large m-container">
         <div class="ui container">
-            <form action="#" method="post" class="ui form">
+            <form action="#" method="post" th:action="@{/admin/types}" class="ui form">
                 <div class="field">
                     <div class="ui left labeled input">
                         <label class="ui teal basic label">名称</label>
-                        <input type="text" name="indexPicture" placeholder="分类名称">
+                        <input type="text" name="name" placeholder="分类名称">
                     </div>
                 </div>
                 <div class="ui right aligned container">
-                    <button type="button" class="ui secondary button" >返回</button>
-                    <button type="button" class="ui teal submit button">提交</button>
+                    <button type="button" class="ui secondary button" onclick="window.history.go(-1)">返回</button>
+                    <button type="button" class="ui teal submit button" >提交</button>
                 </div>
-                <div class="ui error message" th:unless="#strings.isEmpty(message)}" th:text="${message}"></div>
             </form>
         </div>
     </div>

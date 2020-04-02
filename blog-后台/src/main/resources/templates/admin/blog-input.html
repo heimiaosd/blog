@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,8 @@
         inverted  反转
      -->
     <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
-        <div class="ui inverted secondary menu">
-            <div class="ui stackable container">
+        <div class="ui stackable container">
+            <div class="ui inverted secondary menu">
                 <h2 class="ui teal header item">Blog</h2>
                 <a href="#" class="m-item item m-mobile-hide"><i class="home  icon"></i>博客</a>
                 <a href="#" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
@@ -24,7 +24,7 @@
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
                         <div class="text">
-                            <img src="../../static/images/002.jpg" style="width: 50px; height: 60px" alt="" class="ui small avatar image">
+                            <img src="../../static/images/002.jpg" th:src="@{/static/images/002.jpg}" style="width: 50px; height: 60px" alt="" class="ui small avatar image">
                             我
                         </div>
                         <i class="dropdown icon"></i>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
-    <link rel="stylesheet" href="/css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="/css/semantic.min.css" th:href="@{/static/css/semantic.min.css}">
+    <link rel="stylesheet" href="/css/mycss.css" th:href="@{/static/css/mycss.css}">
 </head>
 <body>
     <!-- 导航 -->
@@ -14,9 +14,9 @@
         <div class="ui inverted secondary menu">
             <div class="ui stackable container">
                 <h2 class="ui teal header item">Blog</h2>
-                <a href="#" class="m-item item m-mobile-hide"><i class="home  icon"></i>博客</a>
-                <a href="#" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+                <a href="#" th:href="@{/admin/blog}" class="m-item item m-mobile-hide"><i class="home  icon"></i>博客</a>
+                <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide "><i class="idea icon"></i>分类</a>
+                <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
                         <div class="text">
@@ -89,7 +89,7 @@
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
-    <script src="/js/semantic.min.js"></script>
+    <script src="/js/semantic.min.js" th:src="@{/static/js/semantic.min.js}"></script>
 
     <script>
         $('.my.item').click(function () {
