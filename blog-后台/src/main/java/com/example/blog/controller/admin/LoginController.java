@@ -1,4 +1,4 @@
-package com.example.blog.web.admin;
+package com.example.blog.controller.admin;
 
 import com.example.blog.po.User;
 import com.example.blog.service.UserService;

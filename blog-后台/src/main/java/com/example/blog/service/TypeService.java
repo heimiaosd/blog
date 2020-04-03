@@ -15,4 +15,6 @@ public interface TypeService  {
     Type updateType(Long id,Type type);
     //删除
     void deleteType(Long id);
+    //类型名称重复查询
+    Type findName(String name);
 }

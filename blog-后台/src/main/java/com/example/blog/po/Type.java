@@ -1,5 +1,6 @@
 package com.example.blog.po;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id;       //序号
+    @NotBlank(message = "类型名称不能为空")
     private String name;   //类型名称
     @OneToMany(mappedBy = "type")
     private List<Blog> blogs = new ArrayList<>();   //博客集合

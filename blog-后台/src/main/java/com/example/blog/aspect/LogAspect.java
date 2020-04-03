@@ -18,7 +18,7 @@ public class LogAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     //声明切面 拦截web目录下所有方法的异常
-    @Pointcut("execution(* com.example.blog.web.*.*(..))")
+    @Pointcut("execution(* com.example.blog.controller.*.*(..))")
     public void log() {}
 
     @Before("log()")
